@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  db:
+    image: 'postgres:latest'
+    restart: unless-stopped
+    container_name: db
+    environment:
+      - POSTGRES_USERNAME=postgres
+      - POSTGRES_PASSWORD=123456
+      - APP_DB_NAME=user
+    ports:
+      - 5432:5432
+
